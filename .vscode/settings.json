@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "led-matrix-c.h": "c",
+        "protocol.h": "c",
+        "stdlib.h": "c",
+        "epoll.h": "c",
+        "unistd.h": "c",
+        "string.h": "c",
+        "loop.h": "c",
+        "inet.h": "c",
+        "signal.h": "c",
+        "types.h": "c",
+        "socket.h": "c",
+        "netdb.h": "c"
+    }
+}
