@@ -1,0 +1,14 @@
+name: CI
+on: [push]
+jobs:
+  build:
+    runs-on: [ubuntu-latest]
+    steps:
+    - name: Docker Buildx
+      uses: crazy-max/ghaction-docker-buildx@v1.0.5
+    - uses: actions/checkout@v1
+    - name: docker login
+      run: docker login --username ${{ secrets.DOCKER_USER }} --password ${{ secrets.DOCKER_PASSWORD }}
+    - name: Build the Docker image
+      run: 
+        docker buildx build . --platform linux/armhf,linux/arm64 --tag jmercha/multilife-rgb --push 
