@@ -8,7 +8,8 @@ RUN apk add g++ git make && \
 	cp librgbmatrix.so.1 /usr/lib && \
 	cd ../../ && \
 	rm -rf rpi-rgb-led-matrix
-	
 COPY . .
-
 RUN make
+
+ENV HOST=ws.multilife.live
+ENV PORT=31337
